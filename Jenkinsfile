@@ -4,14 +4,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Build Docker Image"
-                bat "docker build -t mycontainerapp"
+                bat "docker build -t mydockerimg"
             }
         } 
         stage('run') {
             steps {
                 echo "Run the container"
-                bat "docker rm -f mycontainerapp || exit 0"
-                bat "docker run -d -p mycontainerapp sreeshvini4/demoapp:t1"
+                bat "docker rm -f mydockerimg || exit 0"
+                bat "docker run -d -p mydockerimg sreeshvini4/demoapp:t1"
             }
         }
     }
