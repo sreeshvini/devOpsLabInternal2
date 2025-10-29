@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo "Run the container"
                 bat "docker rm -f mydockerimg || exit 0"
-                bat "docker run -d -p mydockerimg sreeshvini4/demoapp:t1"
+                bat "docker run -d -p mydockerimg sreeshvini4/mycontainerapp:t1"
             }
         }
     }
